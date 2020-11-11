@@ -21,7 +21,18 @@
 
     <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
   </properties>
-
+  <distributionManagement>
+    <repository>
+     <id>releases</id>
+     <url>http://localhost:8081/repository/maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <name>nexus-snapshots</name>
+      <url>http://localhost:8081/repository/maven-releases/</url>
+    <snapshotRepository>
+  </distributionManagement>
+  
   <build>
     <plugins>
       <plugin>
